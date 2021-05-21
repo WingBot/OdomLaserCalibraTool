@@ -73,8 +73,8 @@ void messageIO::readDataFromBag(const std::string &bag_name, const std::string &
     if (odom != NULL) {
       odometerData tmp;
       tmp.timestamp = odom->header.stamp;
-      tmp.v_l = odom->vector.x;
-      tmp.v_r = odom->vector.y;
+      tmp.v_l = odom->vector.y;
+      tmp.v_r = odom->vector.x;
       odom_data.push_back(tmp);
     }
   }
